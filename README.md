@@ -17,10 +17,10 @@ In real-world financial systems, **model predictions aren't enough**. Institutio
 | Data Processing      | `pandas`, `numpy`, `scikit-learn`, `imbalanced-learn`, `pandas-profiling`   |
 | Modeling             | `XGBoost`, `LightGBM`, `optuna`, `scikit-learn`                             |
 | Explainability       | `SHAP`, `LIME`, `Eli5`                                                      |
-| Fairness & Bias      | `Fairlearn`, `AIF360` (optional)                                            |
+| Fairness & Bias      | `Fairlearn`, `AIF360`                                             |
 | Reporting            | `Jinja2`, `WeasyPrint`, `logging`, `datetime`, `uuid`                       |
 | Visualization        | `matplotlib`, `seaborn`, `plotly`, `streamlit`                              |
-| API & Deployment     | `FastAPI`, `Docker`, `GitHub Actions` (optional)                            |
+| API & Deployment     | `FastAPI`, `Docker`, `GitHub Actions`                            |
 
 ## 🛠️ Features
 ### ✅ Credit Default Prediction
