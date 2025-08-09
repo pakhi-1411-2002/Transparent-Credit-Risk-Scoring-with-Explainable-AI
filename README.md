@@ -1,37 +1,92 @@
-# Transparent-Credit-Risk-Scoring-with-Explainable-AI
+# 💳 Credit Health Coach: Explainable Credit Score Engine
 
-💳 Transparent Credit Risk Scoring with Explainable AI
-Predict credit default risk with **accuracy**, **fairness**, and **transparency** — all while aligning with modern financial regulations like **FCRA** and **GDPR**.
-This project integrates **machine learning**, **explainable AI**, and **regulatory reporting** to build a fully transparent credit scoring pipeline that could be used by FinTech companies, banks, or regulators.
+An intelligent mini-project that simulates a user-facing credit health assistant. It analyzes your financial behavior, classifies expenses, predicts credit score movement, and offers **transparent** and **personalized** feedback using **Explainable AI** and **semantic search-based NLP**.
 
-## 📌 Project Overview
-In real-world financial systems, **model predictions aren't enough**. Institutions must **justify** their decisions to regulators and consumers. This project addresses that need by:
-- Predicting loan default risk using machine learning.
-- Providing human-readable explanations with SHAP/LIME.
-- Generating auditable reports and mock regulatory notices.
-- Optionally detecting demographic bias in model behavior.
+---
+
+## 📌 Introduction
+
+Managing personal credit is confusing and opaque for most users. This project aims to:
+- **Demystify credit scores**
+- **Classify financial behavior into needs/wants**
+- **Predict credit score impact**
+- **Explain score changes with SHAP**
+- Allow users to **ask questions** like: *"Why did my score drop?"*
+
+All while keeping things **interpretable**, **lightweight**, and **privacy-aware**.
+
+---
+
+## 🧠 Project Overview
+
+We simulate anonymized financial transaction data and credit card usage, then:
+- Predict how various spending behaviors impact credit health
+- Enable users to upload supporting docs (like credit card bills) using computer vision
+- Offer detailed SHAP-based explanations
+- Enable semantic, human-like Q&A interaction with a lightweight NLP layer (Level 2)
+
+---
+
+## 📦 Deliverables
+
+### ✅ 1. **Synthetic Data Generator**
+- Generate mock data for users’ daily purchases (amount, category, timestamp)
+- Tag purchases as needs/wants
+- Simulate credit utilization, bill payment patterns, and due dates
+
+### ✅ 2. **Purchase Classifier**
+- **Rule-based model** for essential vs non-essential purchases
+- Categories: groceries, rent, luxury shopping, bills, travel, etc.
+
+### ✅ 3. **Credit Score Estimator**
+- Lightweight ML model (e.g. `XGBoost` or `RandomForest`)
+- Trained on synthetic features like:
+  - Credit Utilization Ratio
+  - Payment History
+  - Number of Open Accounts
+  - Spending Category Ratios
+
+### ✅ 4. **Explainable AI Layer (⭐ Star Feature)**
+- Use **SHAP** to explain individual credit score predictions
+- Visual + Textual explanation of what drove score up/down
+
+### ✅ 5. **“My Discussion” NLP Chat Layer (⭐ Star Feature)**
+- Use `sentence-transformers` + `FAISS` for **semantic search** of FAQs
+- Embed user queries (e.g. *"Why did my score drop?"*)
+- Retrieve the closest intent + SHAP-based explanation
+
+### ✅ 6. **Document Understanding Layer**
+- Use `Tesseract OCR` or `EasyOCR` to extract info from:
+  - Credit card bills
+  - ID proofs
+- Convert visual data into structured text for model input
+
+---
 
 ## ⚙️ Tech Stack
-| Category             | Tools Used                                                                  |
-|----------------------|-----------------------------------------------------------------------------|
-| Data Processing      | `pandas`, `numpy`, `scikit-learn`, `imbalanced-learn`, `pandas-profiling`   |
-| Modeling             | `XGBoost`, `LightGBM`, `optuna`, `scikit-learn`                             |
-| Explainability       | `SHAP`, `LIME`, `Eli5`                                                      |
-| Fairness & Bias      | `Fairlearn`, `AIF360`                                             |
-| Reporting            | `Jinja2`, `WeasyPrint`, `logging`, `datetime`, `uuid`                       |
-| Visualization        | `matplotlib`, `seaborn`, `plotly`, `streamlit`                              |
-| API & Deployment     | `FastAPI`, `Docker`, `GitHub Actions`                            |
 
-## 🛠️ Features
-### ✅ Credit Default Prediction
-- Trained model (XGBoost/LightGBM) on public datasets (e.g., LendingClub/UCI Credit).
-- Metrics: AUC, F1-score, Precision/Recall, Confusion Matrix.
+| Layer                | Technology Used                         |
+|----------------------|------------------------------------------|
+| Programming Language | Python                                   |
+| ML Models            | Scikit-Learn, XGBoost                    |
+| Explainability       | SHAP                                     |
+| NLP                  | SentenceTransformers, FAISS              |
+| Semantic Search      | FAISS / Sklearn NearestNeighbors         |
+| OCR (CV Layer)       | Tesseract OCR / EasyOCR                  |
+| Data Storage         | JSON / Pandas / SQLite (lightweight)     |
 
-### ✅ Explainability Layer
-- Global Feature Importance (SHAP summary plots).
-- Local Prediction Explanations (SHAP force plots, LIME).
-- Counterfactual suggestions (optional): *"If you increased income by $X..."*
+---
 
-### ✅ Regulatory Reporting Simulation
-- Human-readable explanation generator for loan rejections.
-- Exports PDF rejection notices using
+## 🚀 Features
+
+- 📊 **Spend Classification** — Categorizes daily expenses into needs/wants
+- 🔍 **Credit Behavior Simulation** — Models credit health trends
+- 🤖 **Credit Score Estimation** — ML-driven score prediction
+- 💡 **Explainable AI (SHAP)** — Transparent model decisions
+- 💬 **"My Discussion" NLP Interface** — Ask questions and get SHAP-driven answers
+- 📷 **Computer Vision Layer** — Extracts structured data from bills/ID docs
+
+---
+
+## 📁 Suggested Folder Structure
+
