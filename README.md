@@ -88,5 +88,6 @@ We simulate anonymized financial transaction data and credit card usage, then:
 
 ---
 
-## 📁 Suggested Folder Structure
+## ✨ Project Outcome
 
+This project demonstrates how explainable ML and simple NLP can work together to create human-friendly, trustworthy credit tools. It’s also modular — so it can evolve into a production-grade fintech prototype with minimal changes.
