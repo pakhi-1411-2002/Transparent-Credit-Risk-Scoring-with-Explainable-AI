@@ -29,33 +29,29 @@ We simulate anonymized financial transaction data and credit card usage, then:
 
 ## 📦 Deliverables
 
-### ✅ 1. **Synthetic Data Generator**
-- Generate mock data for users’ daily purchases (amount, category, timestamp)
-- Tag purchases as needs/wants
-- Simulate credit utilization, bill payment patterns, and due dates
-
-### ✅ 2. **Purchase Classifier**
+### ✅ 1. **Purchase Classifier**
 - **Rule-based model** for essential vs non-essential purchases
 - Categories: groceries, rent, luxury shopping, bills, travel, etc.
+- Simulate credit utilization, bill payment patterns, and due dates
 
-### ✅ 3. **Credit Score Estimator**
-- Lightweight ML model (e.g. `XGBoost` or `RandomForest`)
+### ✅ 2. **Credit Score Estimator**
+- Lightweight ML model (`XGBoost`)
 - Trained on synthetic features like:
   - Credit Utilization Ratio
   - Payment History
   - Number of Open Accounts
   - Spending Category Ratios
 
-### ✅ 4. **Explainable AI Layer (⭐ Star Feature)**
+### ✅ 3. **Explainable AI Layer (⭐ Star Feature)**
 - Use **SHAP** to explain individual credit score predictions
 - Visual + Textual explanation of what drove score up/down
 
-### ✅ 5. **“My Discussion” NLP Chat Layer (⭐ Star Feature)**
+### ✅ 4. **“My Discussion” NLP Chat Layer (⭐ Star Feature)**
 - Use `sentence-transformers` + `FAISS` for **semantic search** of FAQs
 - Embed user queries (e.g. *"Why did my score drop?"*)
 - Retrieve the closest intent + SHAP-based explanation
 
-### ✅ 6. **Document Understanding Layer**
+### ✅ 5. **Document Understanding Layer**
 - Use `Tesseract OCR` or `EasyOCR` to extract info from:
   - Credit card bills
   - ID proofs
